@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
+
+$hamburger-color: white;
+$hamburger-width: 20px;
+
+@function get-hambuger-height($hamburger-width) {
+    @return $hamburger-width / 10;
+}
+@function get-hambuger-space($hamburger-width) {
+    @return $hamburger-width / 5;
+}
+@function get-hambuger-roundness($hamburger-width) {
+    @return $hamburger-width / 2;
+}
+
+input, label, span, img, button, a, video, svg, small {
+    display: inline-block;    
+}
+
+.row-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.column-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+// color picker
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+$white: #fff;
+$gray: #6c757d;
+$gray-dark: #343a40;
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+$nice_color: #28303d;
+$main-color: $gray-dark;
+
+//breakpoints
+
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// general styling
+
+* {
+    font-family: "lato";    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+p, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    padding: 0.1px;
+    width: 100%;        
+    // overflow: hidden;
+}
+
+.wrapper__burger {
+    position: relative;
+    width: $hamburger-width;    
+    margin-right: 2rem;
+}
+.check-burger {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    // width: 100%;
+    // height: 100%;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;    
+    width: 100%;
+    height: 100%;
+    &:hover ~ .hamburger {
+        > div {
+            background-color: $orange;
+        }
+    }
+    &:checked {
+        ~ .hamburger {
+            > div {
+                // transform: rotate(225deg);
+                &:nth-child(1) {
+                    transform: translateY(10px) rotate(135deg);
+                }
+                &:nth-child(2) {
+                    // transform: rotate(90deg);
+                    // visibility: hidden;
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    transform: translateY(-10px) rotate(-135deg);
+                }
+            }
+        }                
+        &:hover {
+            ~ .hamburger {
+                > div {
+                    // transform: rotate(235deg);
+                    background-color: $green;
+                }            
+            }
+        }    
+    }
+}
+
+// .nav-burger {
+//     display: none !important;
+//     margin: 0;
+//     margin-left: auto;  
+//     margin-right: 2rem;
+//     .hamburger {
+//         div {
+//             background-color: $main-color;        
+//         }
+//     }
+// }
+.hamburger {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    > div {        
+        background-color: $hamburger-color;        
+        border-radius: get-hambuger-roundness($hamburger-width);
+        height: get-hambuger-height($hamburger-width);
+        margin-bottom: get-hambuger-space($hamburger-width);
+        transition: background-color 0.2s ease-in-out, transform 0.3s ease-in-out;
+        &:nth-child(2) {
+            transition: background-color 0.2s ease-in-out,  opacity 0.1s ease-in-out;
+        }        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }    
+    &:hover {
+        > div {
+            background-color: $orange;        
+        }
+    }    
+}
+
+span, img, input {
+    display: inline-block;
+}
+$colors: (main-bg: blue, secondary-bg: red);
+
+@mixin get-color($colors, $key) {
+    color: map-get($colors, $key);
+}

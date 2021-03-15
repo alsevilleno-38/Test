@@ -1,0 +1,17 @@
+@use "_base/style";
+
+$main-color: green;
+
+.special-box {
+    @include style.get-color(style.$colors, secondary-bg);
+    height: 100px;
+    width: 100px;
+    background-color: $main-color;
+}
+
+.testing {
+    background-color: red($main-color);
+}
+.img-fluid {
+    max-width: 300px;
+}

@@ -1,0 +1,33 @@
+
+> Test@1.0.0 webpack C:\repos\Test
+> webpack --config webpack.config.js
+
+C:\repos\Test\public\img
+assets by path [1m[32m*.js[39m[22m 1.67 MiB
+  asset [1m[32mindex.js[39m[22m 856 KiB [1m[33m[compared for emit][39m[22m (name: index)
+  asset [1m[32mhome.js[39m[22m 855 KiB [1m[33m[compared for emit][39m[22m (name: home)
+assets by path [1m[32m../../page/*.html[39m[22m 732 bytes
+  asset [1m[32m..\..\page\index.html[39m[22m 388 bytes [1m[33m[compared for emit][39m[22m
+  asset [1m[32m..\..\page\home.html[39m[22m 344 bytes [1m[33m[compared for emit][39m[22m
+runtime modules 1.83 KiB 8 modules
+cacheable modules 295 KiB
+  modules by path [1m./src/[39m[22m 2.91 KiB
+    modules by path [1m./src/js/[39m[22m 418 bytes
+      modules by path [1m./src/js/index/*.js[39m[22m 235 bytes 2 modules
+      modules by path [1m./src/js/home/*.js[39m[22m 183 bytes 2 modules
+    modules by path [1m./src/sass/[39m[22m 2.5 KiB
+      modules by path [1m./src/sass/index/*.scss[39m[22m 1.31 KiB 2 modules
+      modules by path [1m./src/sass/home/*.scss[39m[22m 1.18 KiB 2 modules
+  modules by path [1m./node_modules/[39m[22m 292 KiB
+    modules by path [1m./node_modules/css-loader/dist/runtime/*.js[39m[22m 3.78 KiB
+      [1m./node_modules/css-loader/dist/runtime/cssWithMappingToString.js[39m[22m 2.21 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+      [1m./node_modules/css-loader/dist/runtime/api.js[39m[22m 1.57 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+    [1m./node_modules/jquery/dist/jquery.js[39m[22m 282 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+    [1m./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js[39m[22m 6.67 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+webpack 5.25.0 compiled [1m[32msuccessfully[39m[22m in 894 ms
+assets by status 1.67 MiB [1m[32m[cached][39m[22m 2 assets
+assets by path [1m[32m.[39m[22m 738 bytes
+  asset [1m[32m..\..\page\index.html[39m[22m 394 bytes [1m[32m[emitted][39m[22m
+  asset [1m[32m..\..\page\home.html[39m[22m 344 bytes [1m[32m[emitted][39m[22m
+cached modules 295 KiB (javascript) 1.83 KiB (runtime) [1m[32m[cached][39m[22m 20 modules
+webpack 5.25.0 compiled [1m[32msuccessfully[39m[22m in 27 ms
