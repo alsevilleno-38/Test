@@ -8,9 +8,10 @@ const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPl
 
 module.exports = {
     entry: {
-        index: "./src/js/index.js",
-        home: "./src/js/home.js",
-        about: "./src/js/about.js"
+        // index: "./src/js/index.js",
+        // home: "./src/js/home.js",
+        // about: "./src/js/about.js",
+        contact: "./src/js/contact.js"
     },
     // entry: "./src/js/index/index.js",        
     output: {
@@ -81,21 +82,27 @@ module.exports = {
 
         ]
     },
-    plugins: [new HtmlWebpackPlugin({
-        chunks: ["index"],
-        filename: `${path.join(workspaceDir, "/page/index.html")}`,
-        template: "./src/page/index.html"
-    }),
+    plugins: [
+    //     new HtmlWebpackPlugin({
+    //     chunks: ["index"],
+    //     filename: `${path.join(workspaceDir, "/page/index.html")}`,
+    //     template: "./src/page/index.html"
+    // }),
+    // new HtmlWebpackPlugin({
+    //     chunks: ["home"],
+    //     filename: `${path.join(workspaceDir, "/page/home.html")}`,
+    //     template: "./src/page/home.html"
+    // }),  
+    // new HtmlWebpackPlugin({
+    //     chunks: ["about"],
+    //     filename: `${path.join(workspaceDir, "/page/about.html")}`,
+    //     template: "./src/page/about.html"
+    // }),
     new HtmlWebpackPlugin({
-        chunks: ["home"],
-        filename: `${path.join(workspaceDir, "/page/home.html")}`,
-        template: "./src/page/home.html"
-    }),  
-    new HtmlWebpackPlugin({
-        chunks: ["about"],
-        filename: `${path.join(workspaceDir, "/page/about.html")}`,
-        template: "./src/page/about.html"
-    }),     
+        chunks: ["contact"],
+        filename: `${path.join(workspaceDir, "/page/contact.html")}`,
+        template: "./src/page/contact.html"
+    }),   
     // new CopyPlugin({
     //     patterns: [
     //         {

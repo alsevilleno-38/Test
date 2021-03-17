@@ -14,19 +14,60 @@ body {
     z-index: 100;
     overflow: auto;        
     .close {
-        position: absolute;
+        position: fixed;
         color: #949c9c;
         font-size: 3rem;
         cursor: pointer;
         top: 0.2rem;
         left: 1.2rem;
         font-size: 2.5rem;
+        transition: all 0.2s ease-in-out;
 
+        &:hover {
+            color: white;
+        }
+    
+    }
+    .backward {
+        position: fixed;
+        top: 50%;
+        left: 1rem;
+        z-index: 2;
+        cursor: pointer;
+        &:hover {
+            svg {
+                fill: white;
+                transform: scale(1.1);
+            }
+        }
+        svg {
+            width: 3rem;
+            height: 3rem;
+            fill: #9ea5a5;
+            transition: all 0.2s ease-in-out;
+        }
     }
     .forward {
-        
+        position: fixed;
+        top: 50%;
+        right: 2rem;
+        z-index: 2;
+        cursor: pointer;
+        &:hover {
+            svg {
+                fill: white;
+                transform: scale(1.1);
+            }
+        }
+        svg {
+            width: 3rem;
+            height: 3rem;
+            fill: #9ea5a5;
+            transition: all 0.2s ease-in-out;
+        }
     }
     .modal {
+        z-index: 1;
         width: 85%;
         // height: 50vh;
         position: absolute;

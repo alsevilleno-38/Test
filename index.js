@@ -15,6 +15,9 @@ app.get("/home", (req, res, next) => {
 app.get("/index", (req, res, next) => {
     res.sendFile(path.join(workspaceDir, "page", "index.html"));
 })
+app.get("/contact", (req, res, next) => {
+    res.sendFile(path.join(workspaceDir, "page", "contact.html"));
+})
 app.get("/about", (req, res, next) => {
     res.sendFile(path.join(workspaceDir, "page", "about.html"));
 })
